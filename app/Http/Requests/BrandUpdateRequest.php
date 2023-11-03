@@ -26,7 +26,7 @@ class BrandUpdateRequest extends FormRequest
         return [
             'brand_name_en' => 'required',
             'brand_name_bn' => 'required',
-            'brand_image' => 'image|mimes:png,jpg',
+           // 'brand_image' => 'image|mimes:png,jpg',
         ];
     }
 }

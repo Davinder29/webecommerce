@@ -39,31 +39,35 @@ class CategoryController extends Controller
      */
     public function store(CategoryStoreRequest $request)
     {
+          //  try{
+              if($request->file('category_image')){
+                    $upload_location = 'upload/categories/';
+                  //  print_r($upload_location);die;
+                    $file = $request->file('category_image');
+                    $name_gen = hexdec(uniqid()).'.'.$file->getClientOriginalExtension();
+                    Image::make($file)->resize(600,600)->save($upload_location.$name_gen);
+                    $save_url = $upload_location.$name_gen;
 
-        if($request->file('category_image')){
-            $upload_location = 'upload/categories/';
-            $file = $request->file('category_image');
-            $name_gen = hexdec(uniqid()).'.'.$file->getClientOriginalExtension();
-            Image::make($file)->resize(600,600)->save($upload_location.$name_gen);
-            $save_url = $upload_location.$name_gen;
-
-            Category::create([
-                'category_name_en' => $request->input('category_name_en'),
-                'category_name_bn' => $request->input('category_name_bn'),
-                'category_slug_en' => Str::slug($request->input('category_slug_en')),
-                'category_slug_bn' => Str::slug($request->input('category_slug_bn')),
-                'category_icon' => $request->input('category_icon'),
-                'category_image' => $save_url
-            ]);
-        }else{
-            Category::create([
-                'category_name_en' => $request->input('category_name_en'),
-                'category_name_bn' => $request->input('category_name_bn'),
-                'category_slug_en' => Str::slug($request->input('category_slug_en')),
-                'category_slug_bn' => Str::slug($request->input('category_slug_bn')),
-                'category_icon' => $request->input('category_icon'),
-            ]);
-        }
+                    Category::create([
+                        'category_name_en' => $request->input('category_name_en'),
+                        'category_name_bn' => $request->input('category_name_bn'),
+                        'category_slug_en' => Str::slug($request->input('category_slug_en')),
+                        'category_slug_bn' => Str::slug($request->input('category_slug_bn')),
+                        'category_icon' => $request->input('category_icon'),
+                        'category_image' => $save_url
+                    ]);
+                }else{
+                    Category::create([
+                        'category_name_en' => $request->input('category_name_en'),
+                        'category_name_bn' => $request->input('category_name_bn'),
+                        'category_slug_en' => Str::slug($request->input('category_slug_en')),
+                        'category_slug_bn' => Str::slug($request->input('category_slug_bn')),
+                        'category_icon' => $request->input('category_icon'),
+                    ]);
+                }
+         //   }catch(\Exception $ex){
+             //   print_r($ex->getMessage());die;
+          //  }
 
         $notification = [
             'message' => 'Category Created Successfully!!!',
