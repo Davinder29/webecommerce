@@ -1,0 +1,124 @@
+
+ @media (min-width:1200px){
+ 	.container {
+	    max-width: 1270px !important;
+	}
+ }
+ @media(max-width:1199px){
+ 	.main-catagries .inn-catag .cat-detail .cat-text {
+    font-size: 11px;
+    height: 195px;
+}
+.main-catagries .inn-catag .cat-detail .cat-link {
+    font-size: 11px;
+    display: block;
+	}
+	.main-catagries .col-lg-2 {
+    padding: 0 5px;
+}
+.main-catagries .inn-catag .cat-detail h2 {
+    font-size: 12px;
+	}
+ }
+
+ @media(max-width:991px){
+    .container {
+    width: 100% !important;
+    max-width: 100%;
+}
+.pro-in-detal .product-sec {
+    display: block;
+}
+ 	.mob-header-menu {
+    display: block;
+}
+.header .menu > ul > li > a i {
+    display: block;
+}
+ 	.main-header .top-bar .left-top .mob-header-menu {
+    position: absolute;
+    top: 050%;
+    transform: translate(-50%, -50%);
+    left: 50%;
+}
+.main-header .mid-menu .in-mid-menu .main-logo {
+    display: none;
+}
+.main-header .mid-menu .in-mid-menu {
+    border-bottom: 0;
+    padding-bottom: 10px;
+    margin-top: -10px;
+}
+.top-bar .container, .main-header .mid-menu .container {
+    max-width: 99%;
+}
+.header {
+    display: block;
+    width: auto;
+    position: absolute;
+    z-index: 999999;
+    padding: 15px;
+    top: 11px;
+}
+ 	.right-top .flag-drop {
+    display: none;
+}
+.right-top .right-top-list ul li:first-child {
+    display: none;
+}
+ 	.mob-toggle-btn {
+	    display: block;
+	}
+	.top-bar .left-top .t-p-l {
+	   display: none;
+	}
+ 	.vr-link .in-vr-link ul li {
+	    display: block;
+	    padding: 2.5px 15px;
+	}
+	.vr-link {
+	    background: #d0d565;
+	}
+	section.media-banner-input {
+	    display: block;
+	}
+	.image-add .in-ad-img-left {
+    display: none;
+	}
+	.image-add .in-ad-img-right {
+	    grid-template-columns: auto;
+	}
+	.product-sec, .main-catagries, .main-brand, .site-content{
+		display: none;
+	}
+	.main-footer .upper-footer {
+	    display: none;
+	}
+	.main-footer .mobile-footer {
+    	display: block;
+	}
+	.main-footer .container {
+    max-width: 100%;
+}
+.mid-footer .keep-in-tuch, .mid-footer .Nieuwsbrief {
+    text-align: center;
+}
+.mid-footer .keep-in-tuch ul {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+.mid-footer .Uitstekend {
+    margin-top: 30px;
+}
+ }
+
+ @media(max-width:767px){
+ 	.Awards {
+    padding-top: 30px;
+}
+ }
+
+ @media(max-width:575px){
+ 	
+ }
