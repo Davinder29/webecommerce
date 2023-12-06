@@ -73,23 +73,27 @@ class FrontendPageController extends Controller
     public function tagwiseProduct($tag)
     {
         $tag_products = Product::where('status',1)->where('product_tags_en', $tag)
-        ->where('product_tags_bn',$tag)->orderBy('id', 'DESC')->paginate(3);
+        ->where('product_tags_bn',$tag)->orderBy('id', 'DESC')->paginate(9);
         $categories = Category::with(['subcategory'])->orderBy('category_name_en', 'ASC')->get();
         return view('frontend.tags.tags_view', compact('tag_products', 'categories'));
     }
 
     public function subcategoryProducts($id, $slug)
     {
-        $subcategory_products = Product::where('status', 1)->where('subcategory_id', $id)->orderBy('id','DESC')->paginate(3);
+        $subcategory_products = Product::where('status', 1)->where('subcategory_id', $id)->orderBy('id','DESC')->paginate(9);
         //$categories = Category::with(['subcategory'])->orderBy('category_name_en', 'ASC')->get();
         return view('frontend.frontend_layout.subcategory_page.subcategory_product_page', compact('subcategory_products'));
     }
 
     public function subsubcategoryProducts($id, $slug)
     {
-        $subsubcategory_products = Product::where('status', 1)->where('sub_subcategory_id', $id)->orderBy('id','DESC')->paginate(3);
+        $subsubcategory_products = Product::with('images')->where('status', 1)->where('sub_subcategory_id', $id)->orderBy('id','DESC')->paginate(9);
+        $subsubcategory_product_details = Product::where('status', 1)->where('sub_subcategory_id', $id)->first();
+       /* echo "<pre>";
+        print_r($subsubcategory_product_details);die;*/
+        $subsubcategory_details = SubSubCategory::with('category')->where('id', $id)->first();
         //$categories = Category::with(['subcategory'])->orderBy('category_name_en', 'ASC')->get();
-        return view('frontend.frontend_layout.subcategory_page.subsubcategory_product_page', compact('subsubcategory_products'));
+        return view('frontend.frontend_layout.subcategory_page.subsubcategory_product_page', compact('subsubcategory_products','subsubcategory_details','subsubcategory_product_details'));
     }
 
     public function productviewAjax($id)

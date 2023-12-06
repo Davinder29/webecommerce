@@ -2461,6 +2461,15 @@ section.media-banner-input {
     justify-content: space-between;
 }
 
+.list-group-flush a.le-login-btn {
+    font-size: 14px;
+    color: #fff;
+    font-weight: 500;
+    background: #b2b66f;
+    border-radius: 4px;
+    padding: 13px 25px;
+    margin-bottom: 5px;
+}
 .main-login .in-log a.le-login-btn {
     font-size: 14px;
     color: #fff;
@@ -2469,6 +2478,11 @@ section.media-banner-input {
     border-radius: 4px;
     padding: 13px 25px;
 }
+
+.list-group-flush a.le-login-btn:hover {
+    background: #a0a53c;
+}
+
 .main-login .in-log a.le-login-btn:hover {
     background: #a0a53c;
 }

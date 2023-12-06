@@ -15,7 +15,7 @@
                 <!-- logo for regular state and mobile devices -->
                     <div class="d-flex align-items-center justify-content-center">
                         <img src="{{ asset('backend') }}/images/logo-dark.png" alt="">
-                        <h3><b>Al Araf Store</b> Admin</h3>
+                        <h3><b>PELLE LUXUR</b></h3>
                     </div>
             </a>
         </div>
@@ -167,7 +167,7 @@
         </ul>
     </li>
 
-    <li class="header nav-small-cap">User Interface</li>
+ <!--    <li class="header nav-small-cap">User Interface</li>
 
     <li class="treeview">
         <a href="#">
@@ -187,7 +187,7 @@
         <li><a href="components_nestable.html"><i class="ti-more"></i>Nestable</a></li>
         <li><a href="components_progress_bars.html"><i class="ti-more"></i>Progress Bars</a></li>
         </ul>
-    </li>
+    </li> -->
     </ul>
 </section>
 

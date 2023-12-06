@@ -4,34 +4,30 @@
           <div class="row">
             <div class="col col-sm-6 col-md-4 col-lg-2">
               <div class="link-head">
-                <a href="javascript:;" class="footer-link-head">Klantenservice</a>
+                <a href="javascript:;" class="footer-link-head"> Our Services</a>
                 <ul>
                   <li><a href="javascript:;" class="foot-link">Contact</a></li>
                   <li><a href="javascript:;" class="foot-link">FAQ</a></li>
-                  <li><a href="javascript:;" class="foot-link">Bestellen en betalen</a></li>
-                  <li><a href="javascript:;" class="foot-link">Bezorgen en afhalen</a></li>
-                  <li><a href="javascript:;" class="foot-link">Retouren</a></li>
-                  <li><a href="javascript:;" class="foot-link">Baggies</a></li>
-                  <li><a href="javascript:;" class="foot-link">Giftcards van The Little Bag</a></li>
-                  <li><a href="javascript:;" class="foot-link">Productinformatie</a></li>
-                  <li><a href="javascript:;" class="foot-link">Klachten en garantie</a></li>
-                  <li><a href="javascript:;" class="foot-link">Kortingscodes</a></li>
-                  <li><a href="javascript:;" class="foot-link">Algemene voorwaarden</a></li>
                 </ul>
               </div>
             </div>
             <div class="col col-sm-6 col-md-4 col-lg-2">
               <div class="link-head">
-                <a href="javascript:;" class="footer-link-head">Informatie</a>
+                <a href="javascript:;" class="footer-link-head"> Information</a>
                 <ul>
-                  <li><a href="javascript:;" class="foot-link">Over The Little Bag</a></li>
-                  <li><a href="javascript:;" class="foot-link">Blog</a></li>
-                  <li><a href="javascript:;" class="foot-link">The Little Green Card</a></li>
-                  <li><a href="javascript:;" class="foot-link">Beslist.nl Webshop Awards</a></li>
-                  <li><a href="javascript:;" class="foot-link">AVG</a></li>
+                  <li ><a href="javascript:;" class="foot-link">SHIPPING & RETURN POLICY</a></li>
+                  <li ><a href="javascript:;" class="foot-link">STORE POLICY</a></li>
+                  <li ><a href="javascript:;" class="foot-link">TRACK MY ORDER</a></li>
+                  <li><a href="javascript:;" class="foot-link">Business bags</a></li>
+                  <li><a href="javascript:;" class="foot-link">Duffle bags</a></li>
+                  <li ><a href="javascript:;" class="foot-link">Clutch</a></li>
+                  <li ><a href="javascript:;" class="foot-link">Wallets</a></li>
+                  <li><a href="javascript:;" class="foot-link">Bagpack</a></li>
+                  <li ><a href="javascript:;" class="foot-link">SHOULDER BAG</a></li>
+                  <li><a href="javascript:;" class="foot-link">Cross body bags</a></li>
                 </ul>
               </div>
-              <div class="link-head bb-head">
+          <!--     <div class="link-head bb-head">
                 <a href="javascript:;" class="footer-link-head">B2B</a>
                 <ul>
                   <li><a href="javascript:;" class="foot-link">Originele kerstpakketten</a></li>
@@ -40,35 +36,25 @@
                   <li><a href="javascript:;" class="foot-link">Beslist.nl Webshop Awards</a></li>
                   <li><a href="javascript:;" class="foot-link">AVG</a></li>
                 </ul>
-              </div>
+              </div> -->
             </div>
             <div class="col col-sm-6 col-md-4 col-lg-2">
               <div class="link-head">
-                <a href="javascript:;" class="footer-link-head">Locaties</a>
+                <a href="javascript:;" class="footer-link-head">Locations</a>
                 <ul>
-                  <li><a href="javascript:;" class="foot-link">Winkel in Delft</a></li>
-                  <li><a href="javascript:;" class="foot-link">Winkel in Vlaardingen</a></li>
-                  <li><a href="javascript:;" class="foot-link">Hoofdkantoor in Schiedam</a></li>
+                  <li><a href="javascript:;" class="foot-link">Kanpur, Uttar Pradesh</a></li>
                 </ul>
               </div>
             </div>
              <div class="col col-sm-6 col-md-4 col-lg-2">
               <div class="link-head">
-                <a href="javascript:;" class="footer-link-head">Categorieën</a>
+                <a href="javascript:;" class="footer-link-head">Our Collection</a>
                 <ul>
-                  <li><a href="javascript:;" class="foot-link">Schoenen</a></li>
-                  <li><a href="javascript:;" class="foot-link">Rugzakken</a></li>
-                  <li><a href="javascript:;" class="foot-link">Tassen</a></li>
-                  <li><a href="javascript:;" class="foot-link">Laptoptassen</a></li>
-                  <li><a href="javascript:;" class="foot-link">Koffers</a></li>
-                  <li><a href="javascript:;" class="foot-link">Riemen</a></li>
-                  <li><a href="javascript:;" class="foot-link">Sieraden</a></li>
-                  <li><a href="javascript:;" class="foot-link">Horloges</a></li>
-                  <li><a href="javascript:;" class="foot-link">Kleding</a></li>
-                  <li><a href="javascript:;" class="foot-link">Accessoires</a></li>
-                  <li><a href="javascript:;" class="foot-link">Wonen</a></li>
-                  <li><a href="javascript:;" class="foot-link">New!</a></li>
-                  <li><a href="javascript:;" class="foot-link">Sale</a></li>
+                  <li><a href="javascript:;"class="foot-link">Backpacks</a></li>
+                  <li ><a href="javascript:;" class="foot-link">Hand bags</a></li>
+                  <li ><a href="javascript:;" class="foot-link">Cross body</a></li>
+                  <li ><a href="javascript:;" class="foot-link">Clutch</a></li>
+                  <li ><a href="javascript:;" class="foot-link">Bussiness bag</a></li>
                 </ul>
               </div>
             </div>
@@ -76,14 +62,15 @@
               <div class="link-head">
                 <a href="javascript:;" class="footer-link-head">Bestsellers</a>
                 <ul>
-                  <li><a href="javascript:;" class="foot-link">Kanken</a></li>
-                  <li><a href="javascript:;" class="foot-link">Flipflops Slim</a></li>
-                  <li><a href="javascript:;" class="foot-link">Divina Clutch</a></li>
-                  <li><a href="javascript:;" class="foot-link">Bergstein Rainboot</a></li>
+                  <li><a href="javascript:;" class="foot-link">BACKPACKS</a></li>
+                  <li><a href="javascript:;" class="foot-link">HAND BAGS</a></li>
+                  <li><a href="javascript:;" class="foot-link">CROSS BODY</a></li>
+                  <li><a href="javascript:;" class="foot-link">CLUTCH</a></li>
+                  <li><a href="javascript:;" class="foot-link">BUSSINESS BAG</a></li>
                 </ul>
               </div>
             </div>  
-            <div class="col col-sm-6 col-md-4 col-lg-2">
+            <!-- <div class="col col-sm-6 col-md-4 col-lg-2">
               <div class="link-head">
                 <a href="javascript:;" class="footer-link-head">Brands</a>
                 <ul>
@@ -100,7 +87,7 @@
                   <li><a href="javascript:;" class="foot-link">Meer merken</a></li>
                 </ul>
               </div>
-            </div>
+            </div> -->
           </div>
         </div>
         <div class="mobile-footer">
@@ -109,7 +96,7 @@
                <div class="accordion-item">
                   <h2 class="accordion-header" id="headingOne">
                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                     Klantenservice
+                     Our Services
                      </button>
                   </h2>
                   <div id="collapseOne" class="accordion-collapse collapse " aria-labelledby="headingOne" data-bs-parent="#accordionExample">
@@ -117,16 +104,6 @@
                         <ul id="ks" class="benmenu">
                         <li class="cc"><a href="javascript:;">Contact</a></li>
                         <li class="cc"><a href="javascript:;">FAQ</a></li>
-                        <li class="cc"><a href="javascript:;">Bestellen en betalen</a></li>
-                        <li class="cc"><a href="javascript:;">Bezorgen en afhalen</a></li>
-                        <li class="cc"><a href="javascript:;">Retouren</a></li>
-                        <li class="cc"><a href="javascript:;">Baggies</a></li>
-                        <li class="cc"><a href="javascript:;">Giftcards van The Little Bag</a></li>
-                        <li class="cc"><a href="javascript:;">Productinformatie</a></li>
-                        <li class="cc"><a href="javascript:;">Klachten en garantie</a></li>
-                        <li class="cc"><a href="javascript:;">Kortingscodes</a></li>
-                        <li class="cc"><a href="javascript:;">Giftcards</a></li>
-                        <li class="cc"><a href="javascript:;">Algemene voorwaarden</a></li>
                     </ul>
                      </div>
                   </div>
@@ -134,23 +111,28 @@
                <div class="accordion-item">
                   <h2 class="accordion-header" id="headingTwo">
                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                     Informatie
+                     Information
                      </button>
                   </h2>
                   <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                      <div class="accordion-body">
                         <ul id="info" class="benmenu">
-                          <li class="cc"><a href="javascript:;">Over The Little Bag</a></li>
-                          <li class="cc"><a href="javascript:;">Blog</a></li>
-                          <li class="cc"><a href="javascript:;">The Little Green Card</a></li>
-                          <li class="cc"><a href="javascript:;">Vacatures</a></li>
-                          <li class="cc"><a href="javascript:;">Beslist.nl Webshop Awards</a></li>
-                          <li class="cc"><a href="javascript:;">AVG</a></li>
+                          <li class="cc"><a href="javascript:;">SHIPPING & RETURN POLICY</a></li>
+                          <li class="cc"><a href="javascript:;">STORE POLICY</a></li>
+                          <li class="cc"><a href="javascript:;">TRACK MY ORDER</a></li>
+                          <li class="cc"><a href="javascript:;">Business bags</a></li>
+                          <li class="cc"><a href="javascript:;">Duffle bags</a></li>
+                          <li class="cc"><a href="javascript:;">Clutch</a></li>
+                          <li class="cc"><a href="javascript:;">Wallets</a></li>
+                          <li class="cc"><a href="javascript:;">Bagpack</a></li>
+                          <li class="cc"><a href="javascript:;">SHOULDER BAG</a></li>
+                          <li class="cc"><a href="javascript:;">Cross body bags</a></li>
+                      
                         </ul>
                      </div>
                   </div>
                </div>
-               <div class="accordion-item">
+            <!--  <div class="accordion-item">
                   <h2 class="accordion-header" id="headingThree">
                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                      B2B
@@ -165,19 +147,17 @@
                           </ul>
                      </div>
                   </div>
-               </div>
+               </div> -->
                <div class="accordion-item">
                   <h2 class="accordion-header" id="headingfour">
                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsefour" aria-expanded="false" aria-controls="collapsefour">
-                     Locaties
+                     Locations
                      </button>
                   </h2>
                   <div id="collapsefour" class="accordion-collapse collapse" aria-labelledby="headingfour" data-bs-parent="#accordionExample">
                      <div class="accordion-body">
                         <ul id="loc" class="benmenu" aria-expanded="true" style="">
-                          <li class="cc"><a href="javascript:;">Winkel in Delft</a></li>
-                          <li class="cc"><a href="javascript:;">Winkel in Vlaardingen</a></li>
-                          <li class="cc"><a href="javascript:;">Hoofdkantoor in Schiedam</a></li>
+                          <li class="cc"><a href="javascript:;">Kanpur, Uttar Pradesh</a></li>
                         </ul>
                      </div>
                   </div>
@@ -185,26 +165,17 @@
                <div class="accordion-item">
                   <h2 class="accordion-header" id="headingfive">
                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsefive" aria-expanded="false" aria-controls="collapsefive">
-                     Categorieën
+                     OUR COLLECTION
                      </button>
                   </h2>
                   <div id="collapsefive" class="accordion-collapse collapse" aria-labelledby="headingfive" data-bs-parent="#accordionExample">
                      <div class="accordion-body">
                         <ul id="catfooter" class="benmenu">
-                          <li class="cc"><a href="javascript:;" title="Schoenen">Schoenen</a></li>
-                          <li class="cc"><a href="javascript:;" title="Rugzakken">Rugzakken</a></li>
-                          <li class="cc"><a href="javascript:;" title="Tassen">Tassen</a></li>
-                          <li class="cc"><a href="javascript:;" title="Laptoptassen">Laptoptassen</a></li>
-                          <li class="cc"><a href="javascript:;" title="Koffers">Koffers</a></li>
-                          <li class="cc"><a href="javascript:;" title="Portemonnees">Portemonnees</a></li>
-                          <li class="cc"><a href="javascript:;" title="Riemen">Riemen</a></li>
-                          <li class="cc"><a href="javascript:;" title="Sieraden">Sieraden</a></li>
-                          <li class="cc"><a href="javascript:;" title="Horloges">Horloges</a></li>
-                          <li class="cc"><a href="javascript:;" title="Kleding">Kleding</a></li>
-                          <li class="cc"><a href="javascript:;" title="Accessoires">Accessoires</a></li>
-                          <li class="cc"><a href="javascript:;" title="Wonen">Wonen</a></li>
-                          <li class="cc"><a href="javascript:;" title="New!">New!</a></li>
-                          <li class="cc"><a href="javascript:;" title="Sale">Sale</a></li>
+                          <li class="cc"><a href="javascript:;" title="Schoenen">BACKPACKS</a></li>
+                          <li class="cc"><a href="javascript:;" title="Rugzakken">HAND BAGS</a></li>
+                          <li class="cc"><a href="javascript:;" title="Tassen">CROSS BODY</a></li>
+                          <li class="cc"><a href="javascript:;" title="Laptoptassen">CLUTCH</a></li>
+                          <li class="cc"><a href="javascript:;" title="Koffers">BUSINESS BAG</a></li>
                         </ul>
                      </div>
                   </div>
@@ -218,15 +189,15 @@
                   <div id="collapsesix" class="accordion-collapse collapse" aria-labelledby="headingsix" data-bs-parent="#accordionExample">
                      <div class="accordion-body">
                         <ul id="bsts" class="benmenu">
-                          <li class="cc"><a href="javascript:;">Kanken</a></li>
-                          <li class="cc"><a href="javascript:;">Flipflops Slim</a></li>
-                          <li class="cc"><a href="javascript:;">Divina Clutch</a></li>
-                          <li class="cc"><a href="javascript:;">Bergstein Rainboot</a></li>
-                      </ul>
+                          <li class="cc"><a href="javascript:;" title="Schoenen">BACKPACKS</a></li>
+                          <li class="cc"><a href="javascript:;" title="Rugzakken">HAND BAGS</a></li>
+                          <li class="cc"><a href="javascript:;" title="Tassen">CROSS BODY</a></li>
+                          <li class="cc"><a href="javascript:;" title="Laptoptassen">CLUTCH</a></li>
+                          <li class="cc"><a href="javascript:;" title="Koffers">BUSINESS BAG</a></li>
                      </div>
                   </div>
                </div>
-               <div class="accordion-item">
+             <!--   <div class="accordion-item">
                   <h2 class="accordion-header" id="headingseven">
                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseseven" aria-expanded="false" aria-controls="collapseven">
                      Brands
@@ -249,7 +220,7 @@
                        </ul>
                      </div>
                   </div>
-               </div>
+               </div> -->
             </div>
  
       </div>
@@ -269,15 +240,15 @@
             </div>
             <div class="col-12 col-md-12 col-lg-4">
               <div class="Nieuwsbrief">
-                <h4>Nieuwsbrief</h4>
+                <h4>Newsletter</h4>
                 <ul class="list-inline">
                   <li>
                   <input type="checkbox" name="geslacht" id="vrouw" value="vrouw" checked="" data-parsley-multiple="geslacht">
-                  <label class="nbck" for="vrouw">Vrouw</label>
+                  <label class="nbck" for="vrouw">All</label>
                   </li>
                   <li>
                   <input type="checkbox" name="geslacht" id="man" value="man" data-parsley-multiple="geslacht" data-gtm-form-interact-field-id="0">
-                  <label class="nbck" for="man">Man</label>
+                  <label class="nbck" for="man">Men</label>
                   </li>
                   <li>
                   <input type="checkbox" name="geslacht" id="kids" value="kids" data-parsley-multiple="geslacht" data-gtm-form-interact-field-id="1"> 
@@ -285,14 +256,14 @@
                   </li>
                   </ul>
                   <div class="nieuwsbrief">
-                  <input type="email" name="email" id="emailnieuwsbrief" class="nieuwsbriefinput show" value="" placeholder="Je e-mailadres" required="">
-                  <input type="submit" class="btn btn-default cc subnieuws show" value="aanmelden">
+                  <input type="email" name="email" id="emailnieuwsbrief" class="nieuwsbriefinput show" value="" placeholder="Enter Email Address" required="">
+                  <input type="submit" class="btn btn-default cc subnieuws show" value="Subscribe">
                   </div>
               </div>
             </div>
             <div class="col-12 col-md-12 col-lg-4">
               <div class="Uitstekend">
-                <h4 class="text-center">Uitstekend</h4>
+                <h4 class="text-center">Pelle Luxur</h4>
                 <ul>
                   <li><a href="javascript:;"><i class="fa-solid fa-star"></i></a></li>
                   <li><a href="javascript:;"><i class="fa-solid fa-star"></i></a></li>
@@ -301,7 +272,7 @@
                   <li><a href="javascript:;"><i class="fa-solid fa-star"></i></a></li>
                 </ul>
                 <div class="uit-p">
-                  <p>40769 Klanten beoordelen The Little Bag met een 4.6 / 5 op <a href="javascript:;">Trustpilot</a></p>
+                  <p>Pelleluxur A leading manufacturer and exporter of leather goods to all the leading brands of belts, bags and accessories, Everest Tannery has benefited from more than a 25 years industry experience and steady expansion.</p>
                 </div>
               </div>
             </div>
@@ -332,7 +303,7 @@
       
     </div>
     <div class="col-xs-12 bottom-footer text-center">
-      <a href="javascript:;" target="_blank">Test user</a> | 
+      <a href="javascript:;" target="_blank">PELLER LUXUR</a> | 
         <a href="javascript:;" target="_blank">Privacy Policy</a> <br> 
        © 2023 
     </div>

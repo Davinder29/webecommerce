@@ -12,7 +12,7 @@
               <p class="me-text">menu</p>
             </div> -->
             <div class="mob-header-menu">
-                <img src="images/mob-logo.png" class="img-fluid" alt="mob-logo">
+                <img src="https://pelleluxur.com/cdn/shop/files/imageedit_2_8277954130_150x.png" class="img-fluid" alt="mob-logo">
             </div>
           </div>
         </div>
@@ -38,31 +38,20 @@
             <div class="right-top-list">
               <ul class="r-i-l">
                 <li><a href="javascript:;" class="klant">Customer Service</a></li>
-                <li class="klantli">
-                    <div class="dropdown">
-                        <button class="btn user-tog dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                          <i class="fa-solid fa-user"></i>
-                        </button>
-                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                         <li><a class="dropdown-item" href="{{ route('dashboard') }}"><span><i class="fa-solid fa-angle-right"></i></span>My Account</a></li>
-                         <li><a class="dropdown-item" href="{{ route('listWishlist') }}"><span><i class="fa-solid fa-angle-right"></i></span>Wishlist</a></li>
-                         <li><a class="dropdown-item" href="{{ route('myCartView') }}"><span><i class="fa-solid fa-angle-right"></i></span>My Cart</a></li>
-                        @auth
-                            <li><a class="dropdown-item" href="{{ route('checkout-page') }}"><span><i class="fa-solid fa-angle-right"></i></span>Checkout</a></li>
-                        @endauth
-                        <li>
-                            @auth
-                                <a class="dropdown-item" href="{{ route('user.logout') }}"><span><i class="fa-solid fa-angle-right"></i></span>User Logout</a>
-                            @else
-                                <a class="dropdown-item" href="{{ route('login') }}"><span><i class="fa-solid fa-angle-right"></i></span>>Login/Register</a>
-                                <a href="{{ route('login') }}"><i class="icon fa fa-lock"></i>Login/Register</a>
-                            @endauth
-                        </li>
-                        </ul>
-                      </div>
-                </li>
+                 <li><a  href="{{ route('dashboard') }}" class="heart"><i class="fa-solid fa-home"></i></a></li>
+                @auth
+                 <li><a class="heart" href="{{ route('dashboard') }}"><i class="fa-solid fa-user"></i></a></li>
+                @else
+                 <li><a class="heart" href="{{ route('login') }}"><i class="fa-solid fa-user"></i></a></li>
+                @endauth
                 <li><a href="{{ route('listWishlist') }}" class="heart"><i class="fa-solid fa-heart"></i><span class="no">0</span></a></li>
                 <li><a href="{{ route('myCartView') }}" class="shipping-bag"><i class="fa-solid fa-bag-shopping"></i><span class="no">0</span></a></li>
+                @auth
+                  <li><a  class="heart" href="{{ route('checkout-page') }}"><i class="fa-solid fa-shopping-cart"></i></a></li>
+                  <li><a  class="heart"  href="{{ route('user.logout') }}"><i class="fa-solid fa-sign-out"></i></a></li>
+                @else
+                   <li><a  class="heart" href="{{ route('login') }}"><i class="fa-solid fa-sign-in"></i></a></li> 
+                @endauth
               </ul>
             </div>
           </div>
@@ -77,7 +66,7 @@
                 <div class="col-lg-7">
                     <div class="main-logo">
                         <div class="ma-l-img">
-                            <img src="{{ asset('frontend_new/assets/images/main-logo.png') }}" class="img-fluid" alt="main-logo">
+                            <img src="https://pelleluxur.com/cdn/shop/files/imageedit_2_8277954130_150x.png" class="img-fluid" alt="main-logo">
                         </div>
                         <ul class="da-he-menu">
                             <li><a href="{{ route('dashboard') }}"><span>Men</span></a></li>

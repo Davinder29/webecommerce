@@ -1,8 +1,10 @@
 @extends('frontend.frontend_master')
 @section('title')
-    Web Ecoomerce
+    Product Details
 @endsection
 @section('frontend_content')
+@include('frontend.frontend_layout.home_page.info-boxes')
+
     <section class="main-n-faq product-detail-bre">
         <div class="container">
             <div class="row">
@@ -11,7 +13,7 @@
                         <nav aria-label="breadcrumb">
                               <ol class="breadcrumb">
                                 <li class="breadcrumb-item"><a href="{{ url('/')}}" class="bread-link">Home</a></li>
-                                <li class="breadcrumb-item active" >{{ $product->product_name_bn }}</li>
+                                <li class="breadcrumb-item active" >{{ ucwords($product->product_name_en) }}</li>
                               </ol>
                             </nav>
                     </div>
@@ -29,14 +31,14 @@
                             <div class="pro-d-img">
                                 <div class="slider-for">
                                     @foreach ($product->images as $single_image)
-                                    <img src="{{ asset('frontend_new/assets/images/p-t.jpg') }}" class="img-fluid" alt="p-s">
+                                    <img src="{{ asset($single_image->photo_name) }}" class="img-fluid" alt="p-s">
                                     @endforeach
                                 </div>
                             </div>
                             <div class="pro-d-tham">
                                 <div class="slider-nav">
                                     @foreach($product->images as $img)
-                                    <img src="{{ asset('frontend_new/assets/images/p-t.jpg') }} " class="img-fluid" alt="p-t">
+                                    <img src="{{  asset($single_image->photo_name) }} " class="img-fluid" alt="p-t">
                                     @endforeach
                                 </div>
                             </div>
@@ -45,30 +47,31 @@
                                       <div class="accordion-item">
                                         <h2 class="accordion-header" id="headingOne">
                                           <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                           {{ $product->product_name_bn }}
+                                           {{ $product->product_name_en }}
                                           </button>
                                         </h2>
+
                                         <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                                           <div class="accordion-body">
                                            <div class="pro-imformeti">
                                             <div class="p-detail">
-                                                <h6>Doelgroep</h6>
+                                                <h6>Color</h6>
                                                 <p>Dames</p>
                                             </div>
                                             <div class="p-detail">
-                                                <h6>Kleur hardware</h6>
+                                                <h6>Product Code</h6>
                                                 <p>Goudkleurig</p>
                                             </div>
                                             <div class="p-detail">
-                                                <h6>Materiaal</h6>
+                                                <h6>Material</h6>
                                                 <p>Leer</p>
                                             </div>
                                             <div class="p-detail">
-                                                <h6>Merk</h6>
+                                                <h6>Exterior</h6>
                                                 <p>Michael Kors</p>
                                             </div>
                                             <div class="p-detail">
-                                                <h6>Merk kleurnaam</h6>
+                                                <h6>Sole</h6>
                                                 <p>black & gold colored hardware</p>
                                             </div>
                                             <div class="p-detail">
@@ -905,83 +908,5 @@
             </div>
         </div>
     </section>
-     <section class="contact-home">
-        <div class="review-summary__container">
-            <div class="container">
-                     <a href="javascript:;">
-                        <span class="star-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" fill="#fff"><path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" fill="#fff"><path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" fill="#fff"><path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" fill="#fff"><path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" fill="#fff"><path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path></svg>
-                            <strong>4.6 / 5</strong>op basis van <strong>41300</strong> klantenbeoordelingen op <strong>Trustpilot</strong>
-                        </span>   
-                    </a> 
-                </div>
-        </div>
-        <div class="container">
-            <div class="in-cont-ho">
-                <div class="row">
-                    <div class="col-lg-6">
-                        <div class="con-deta">
-                            <h4>Bereikbaar maandag t/m zaterdag van 10.00 tot 18.00 uur</h4>
-                            <div class="row c-w-b-f">
-                                <div class="col-lg-6">
-                                    <div class="in-c-w-b-f">
-                                        <div class="c-icon">
-                                            <p><i class="fa-solid fa-comment-dots"></i></p>
-                                        </div>
-                                        <div class="c-detail">
-                                            <a href="javascript:;">Chat</a>
-                                            <p>Antwoord binnen 24 uur</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="in-c-w-b-f">
-                                        <div class="c-icon">
-                                            <p><i class="fa-brands fa-whatsapp"></i></p>
-                                        </div>
-                                        <div class="c-detail">
-                                            <a href="javascript:;">Whatsapp</a>
-                                            <p>Antwoord binnen 24 uur</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="in-c-w-b-f">
-                                        <div class="c-icon">
-                                            <p><i class="fa-solid fa-phone"></i></p>
-                                        </div>
-                                        <div class="c-detail">
-                                            <a href="javascript:;">Bel ons op 0104354103</a>
-                                            <p>Wachttijd 10 minuten</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="in-c-w-b-f">
-                                        <div class="c-icon">
-                                            <p><i class="fa-brands fa-facebook-f"></i></p>
-                                        </div>
-                                        <div class="c-detail">
-                                            <a href="javascript:;">Facebook</a>
-                                            <p>Antwoord binnen 24 uur</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="right-con-d">
-                            <h4>Meld je nu aan voor onze nieuwsbrief</h4>
-                            <div class="con-e-input">
-                            <input type="email" name="e" placeholder="Je e-mailadres">
-                            <a href="javascript:;" class="email-btn">Meld je aan</a>
-                        </div>
-                        </div>
-                        
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+ 
 @endsection

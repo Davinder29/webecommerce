@@ -1,358 +1,651 @@
 @extends('frontend.frontend_master')
 
 @section('title')
-    Al Araf Fashion - SubCategory Product
+   SubCategory Product
 @endsection
 
 @section('frontend_content')
-    <div class="body-content outer-top-xs">
+
+@include('frontend.frontend_layout.home_page.info-boxes')
+<section class="main-product">
         <div class="container">
             <div class="row">
-                <div class="col-md-3 sidebar">
-                    <!-- ================================== TOP NAVIGATION ================================== -->
-                    @include('frontend.frontend_layout.body.side-menu')
-                    <!-- /.side-menu -->
-                    <!-- ================================== TOP NAVIGATION : END ================================== -->
-                    @include('frontend.frontend_layout.category_page.shop-by-widget')
-                    <!-- /.sidebar-module-container -->
+                <div class="col-12">
+                    <div class="m-breadcurmb">
+                        <nav aria-label="breadcrumb">
+                          <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="#">Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">{{$subsubcategory_details->subsubcategory_name_en}}</li>
+                          </ol>
+                        </nav>
+                    </div>
                 </div>
-                <!-- /.sidebar -->
-                <div class="col-md-9">
-                    <!-- ========================================== SECTION – HERO ========================================= -->
-
-                    <div id="category" class="category-carousel hidden-xs">
-                        <div class="item">
-                            <div class="image"> <img src="{{ asset('frontend') }}/assets/images/banners/cat-banner-1.jpg"
-                                    alt="" class="img-responsive"> </div>
-                            <div class="container-fluid">
-                                <div class="caption vertical-top text-left">
-                                    <div class="big-text"> Big Sale </div>
-                                    <div class="excerpt hidden-sm hidden-md"> Save up to 49% off </div>
-                                    <div class="excerpt-normal hidden-sm hidden-md"> Lorem ipsum dolor sit amet, consectetur
-                                        adipiscing elit </div>
-                                </div>
-                                <!-- /.caption -->
-                            </div>
-                            <!-- /.container-fluid -->
-                        </div>
-                    </div>
-
-
-                    <div class="clearfix filters-container m-t-10">
-                        <div class="row">
-                            <div class="col col-sm-6 col-md-2">
-                                <div class="filter-tabs">
-                                    <ul id="filter-tabs" class="nav nav-tabs nav-tab-box nav-tab-fa-icon">
-                                        <li class="active"> <a data-toggle="tab" href="#grid-container"><i
-                                                    class="icon fa fa-th-large"></i>Grid</a> </li>
-                                        <li><a data-toggle="tab" href="#list-container"><i
-                                                    class="icon fa fa-th-list"></i>List</a></li>
-                                    </ul>
-                                </div>
-                                <!-- /.filter-tabs -->
-                            </div>
-                            <!-- /.col -->
-                            <div class="col col-sm-12 col-md-6">
-                                <div class="col col-sm-3 col-md-6 no-padding">
-                                    <div class="lbl-cnt"> <span class="lbl">Sort by</span>
-                                        <div class="fld inline">
-                                            <div class="dropdown dropdown-small dropdown-med dropdown-white inline">
-                                                <button data-toggle="dropdown" type="button" class="btn dropdown-toggle">
-                                                    Position <span class="caret"></span> </button>
-                                                <ul role="menu" class="dropdown-menu">
-                                                    <li role="presentation"><a href="#">position</a></li>
-                                                    <li role="presentation"><a href="#">Price:Lowest first</a></li>
-                                                    <li role="presentation"><a href="#">Price:HIghest first</a></li>
-                                                    <li role="presentation"><a href="#">Product Name:A to Z</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <!-- /.fld -->
-                                    </div>
-                                    <!-- /.lbl-cnt -->
-                                </div>
-                                <!-- /.col -->
-                                <div class="col col-sm-3 col-md-6 no-padding">
-                                    <div class="lbl-cnt"> <span class="lbl">Show</span>
-                                        <div class="fld inline">
-                                            <div class="dropdown dropdown-small dropdown-med dropdown-white inline">
-                                                <button data-toggle="dropdown" type="button" class="btn dropdown-toggle"> 1
-                                                    <span class="caret"></span> </button>
-                                                <ul role="menu" class="dropdown-menu">
-                                                    <li role="presentation"><a href="#">1</a></li>
-                                                    <li role="presentation"><a href="#">2</a></li>
-                                                    <li role="presentation"><a href="#">3</a></li>
-                                                    <li role="presentation"><a href="#">4</a></li>
-                                                    <li role="presentation"><a href="#">5</a></li>
-                                                    <li role="presentation"><a href="#">6</a></li>
-                                                    <li role="presentation"><a href="#">7</a></li>
-                                                    <li role="presentation"><a href="#">8</a></li>
-                                                    <li role="presentation"><a href="#">9</a></li>
-                                                    <li role="presentation"><a href="#">10</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <!-- /.fld -->
-                                    </div>
-                                    <!-- /.lbl-cnt -->
-                                </div>
-                                <!-- /.col -->
-                            </div>
-                            <!-- /.col -->
-                            <div class="col col-sm-6 col-md-4 text-right">
-                                {{-- <div class="pagination-container">
-                                    <ul class="list-inline list-unstyled">
-                                        <li class="prev"><a href="#"><i class="fa fa-angle-left"></i></a></li>
-                                        <li><a href="#">1</a></li>
-                                        <li class="active"><a href="#">2</a></li>
-                                        <li><a href="#">3</a></li>
-                                        <li><a href="#">4</a></li>
-                                        <li class="next"><a href="#"><i class="fa fa-angle-right"></i></a></li>
-                                    </ul>
-                                    <!-- /.list-inline -->
-                                </div> --}}
-                                <!-- /.pagination-container -->
-                            </div>
-                            <!-- /.col -->
-                        </div>
-                        <!-- /.row -->
-                    </div>
-                    <div class="search-result-container ">
-                        <div id="myTabContent" class="tab-content category-list">
-                            <div class="tab-pane active" id="grid-container">
-                                <div class="category-product">
-                                    <div class="row">
-                                        @foreach ($subsubcategory_products as $product)
-                                        <div class="col-sm-6 col-md-4 wow fadeInUp animated"
-                                            style="visibility: visible; animation-name: fadeInUp;">
-                                            <div class="products">
-                                                <div class="product">
-                                                    <div class="product-image">
-                                                        <div class="image"> <a href="{{ route('frontend-product-details',['id' => $product->id, 'slug' => $product->product_slug_en]) }}"><img
-                                                                    src="{{ asset($product->product_thumbnail) }}"
-                                                                    alt=""></a> </div>
-                                                        <!-- /.image -->
-
-                                                    @php
-                                                        $discount_amount = (($product->selling_price-$product->discount_price)/($product->selling_price))*100
-                                                    @endphp
-                                                    @if ($product->discount_price == NULL)
-                                                        <div class="tag new"><span>New</span></div>
-                                                    @else
-                                                        <div class="tag new"><span>{{ round($discount_amount) }}%</span></div>
-                                                    @endif
-                                                    <!-- /.product-image -->
-                                                    </div>
-                                                    <div class="product-info text-left">
-                                                        <h3 class="name"><a href="{{ route('frontend-product-details',['id' => $product->id, 'slug' => $product->product_slug_en]) }}">
-                                                            @if (session()->get('language') == 'bangla')
-                                                                {{ $product->product_name_bn }}
-                                                            @else
-                                                                {{ $product->product_name_en }}
-                                                            @endif
-                                                        </a>
-                                                        </h3>
-                                                        <div class="rating rateit-small rateit"><button id="rateit-reset-2"
-                                                                data-role="none" class="rateit-reset"
-                                                                aria-label="reset rating" aria-controls="rateit-range-2"
-                                                                style="display: none;"></button>
-                                                            <div id="rateit-range-2" class="rateit-range" tabindex="0"
-                                                                role="slider" aria-label="rating" aria-owns="rateit-reset-2"
-                                                                aria-valuemin="0" aria-valuemax="5" aria-valuenow="4"
-                                                                aria-readonly="true" style="width: 70px; height: 14px;">
-                                                                <div class="rateit-selected"
-                                                                    style="height: 14px; width: 56px;"></div>
-                                                                <div class="rateit-hover" style="height:14px"></div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="description"></div>
-                                                        <div class="product-price">
-                                                            @if ($product->discount_price == NULL)
-                                                            <span class="price">${{ $product->selling_price }}</span>
-                                                            @else
-                                                            <span class="price">${{ $product->discount_price }}</span>
-                                                            <span class="price-before-discount">${{ $product->selling_price }}</span>
-                                                            @endif
-                                                        </div>
-                                                        <!-- /.product-price -->
-
-                                                    </div>
-                                                    <!-- /.product-info -->
-                                                    <div class="cart clearfix animate-effect">
-                                                        <div class="action">
-                                                            <ul class="list-unstyled">
-                                                                <li class="add-cart-button btn-group">
-                                                                    <button class="btn btn-primary icon"
-                                                                        data-toggle="dropdown" type="button"> <i
-                                                                            class="fa fa-shopping-cart"></i> </button>
-                                                                    <button class="btn btn-primary cart-btn"
-                                                                        type="button">Add to cart</button>
-                                                                </li>
-                                                                <li class="lnk wishlist"> <a class="add-to-cart"
-                                                                        href="detail.html" title="Wishlist"> <i
-                                                                            class="icon fa fa-heart"></i> </a> </li>
-                                                                <li class="lnk"> <a class="add-to-cart" href="detail.html"
-                                                                        title="Compare"> <i class="fa fa-signal"></i> </a>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                        <!-- /.action -->
-                                                    </div>
-                                                    <!-- /.cart -->
-                                                </div>
-                                                <!-- /.product -->
-
-                                            </div>
-                                            <!-- /.products -->
-                                        </div>
-                                        @endforeach
-                                        <!-- /.item -->
-
-                                    </div>
-                                    <!-- /.row -->
-                                </div>
-                                <!-- /.category-product -->
-
-                            </div>
-                            <!-- /.tab-pane -->
-
-                            <div class="tab-pane" id="list-container">
-                                <div class="category-product">
-                                    @foreach ($subsubcategory_products as $product)
-                                    <div class="category-product-inner wow fadeInUp animated"
-                                        style="visibility: visible; animation-name: fadeInUp;">
-                                        <div class="products">
-                                            <div class="product-list product">
-                                                <div class="row product-list-row">
-                                                    <div class="col col-sm-4 col-lg-4">
-                                                        <div class="product-image">
-                                                            <div class="image"> <img
-                                                                    src="{{ asset($product->product_thumbnail) }}"
-                                                                    alt=""> </div>
-                                                        </div>
-                                                        <!-- /.product-image -->
-                                                    </div>
-                                                    <!-- /.col -->
-                                                    <div class="col col-sm-8 col-lg-8">
-                                                        <div class="product-info">
-                                                            <h3 class="name"><a href="{{ route('frontend-product-details',['id' => $product->id, 'slug' => $product->product_slug_en]) }}">
-                                                                @if (session()->get('language') == 'bangla')
-                                                                {{ $product->product_name_bn }}
-                                                                @else
-                                                                {{ $product->product_name_en }}
-                                                                @endif
-                                                            </a>
-                                                            </h3>
-                                                            <div class="rating rateit-small rateit"><button
-                                                                    id="rateit-reset-14" data-role="none"
-                                                                    class="rateit-reset" aria-label="reset rating"
-                                                                    aria-controls="rateit-range-14"
-                                                                    style="display: none;"></button>
-                                                                <div id="rateit-range-14" class="rateit-range" tabindex="0"
-                                                                    role="slider" aria-label="rating"
-                                                                    aria-owns="rateit-reset-14" aria-valuemin="0"
-                                                                    aria-valuemax="5" aria-valuenow="4" aria-readonly="true"
-                                                                    style="width: 70px; height: 14px;">
-                                                                    <div class="rateit-selected"
-                                                                        style="height: 14px; width: 56px;"></div>
-                                                                    <div class="rateit-hover" style="height:14px"></div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="product-price">
-                                                                @if ($product->discount_price == NULL)
-                                                                    <span class="price">${{ $product->selling_price }}</span>
-                                                                @else
-                                                                    <span class="price">${{ $product->discount_price }}</span>
-                                                                    <span class="price-before-discount">${{ $product->selling_price }}</span>
-                                                                @endif
-                                                            </div>
-                                                            <!-- /.product-price -->
-                                                            <div class="description m-t-10">
-                                                                @if (session()->get('language') == 'bangla')
-                                                                {{ $product->short_description_bn }}
-                                                                @else
-                                                                {{ $product->short_description_en }}
-                                                                @endif
-                                                            </div>
-                                                            <div class="cart clearfix animate-effect">
-                                                                <div class="action">
-                                                                    <ul class="list-unstyled">
-                                                                        <li class="add-cart-button btn-group">
-                                                                            <button class="btn btn-primary icon"
-                                                                                data-toggle="dropdown" type="button"> <i
-                                                                                    class="fa fa-shopping-cart"></i>
-                                                                            </button>
-                                                                            <button class="btn btn-primary cart-btn"
-                                                                                type="button">Add to cart</button>
-                                                                        </li>
-                                                                        <li class="lnk wishlist"> <a class="add-to-cart"
-                                                                                href="detail.html" title="Wishlist"> <i
-                                                                                    class="icon fa fa-heart"></i> </a> </li>
-                                                                        <li class="lnk"> <a class="add-to-cart"
-                                                                                href="detail.html" title="Compare"> <i
-                                                                                    class="fa fa-signal"></i> </a> </li>
-                                                                    </ul>
-                                                                </div>
-                                                                <!-- /.action -->
-                                                            </div>
-                                                            <!-- /.cart -->
-
-                                                        </div>
-                                                        <!-- /.product-info -->
-                                                    </div>
-                                                    <!-- /.col -->
-                                                </div>
-                                                <!-- /.product-list-row -->
-                                                @php
-                                                $discount_amount = (($product->selling_price-$product->discount_price)/($product->selling_price))*100
-                                                @endphp
-                                                @if ($product->discount_price == NULL)
-                                                    <div class="tag new"><span>New</span></div>
-                                                @else
-                                                    <div class="tag new"><span>{{ round($discount_amount) }}%</span></div>
-                                                @endif
-                                            </div>
-                                            <!-- /.product-list -->
-                                        </div>
-                                        <!-- /.products -->
-                                    </div>
-                                    @endforeach
-                                    <!-- /.category-product-inner -->
-
-                                </div>
-                                <!-- /.category-product -->
-                            </div>
-                            <!-- /.tab-pane #list-container -->
-                        </div>
-                        <!-- /.tab-content -->
-                        <div class="clearfix filters-container">
-                            <div class="text-right">
-                                <div class="pagination-container">
-                                    <ul class="list-inline list-unstyled">
-                                        {{ $subsubcategory_products->links() }}
-                                    </ul>
-                                    <!-- /.list-inline -->
-                                </div>
-                                <!-- /.pagination-container -->
-                            </div>
-                            <!-- /.text-right -->
-
-                        </div>
-                        <!-- /.filters-container -->
-
-                    </div>
-                    <!-- /.search-result-container -->
-
-                </div>
-                <!-- /.col -->
             </div>
-            <!-- /.row -->
-            <!--  BRANDS CAROUSEL  -->
-            @include('frontend.frontend_layout.home_page.brands-carousel')
-            <!-- /.logo-slider -->
-            <!--  BRANDS CAROUSEL : END  -->
-        </div>
-        <!-- /.container -->
+            <div class="row in-pro">
+                <div class="col-lg-3">
+                    <div class="left-pro">
+                        <h2>{{$subsubcategory_details->subsubcategory_name_en}}</h2>
+                        <p>{{$subsubcategory_details->subsubcategory_name_en}}: Description</p>
+                    </div>
+                </div>
+                <div class="col-lg-9">
+                    <div class="right-img-pro">
+                        <div class="pro-banner">
+                            <img src="{{asset($subsubcategory_details->category->category_image)}}" class="img-fluid" alt="prod-banner" style="max-height:200px !important;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row main-pro-detail">
+                <div class="col-lg-3">
+                    <div class="left-side-bar">
+                        <div class="left-p-det">
+                            <div class="accordion" id="accordionExample">
+                                  <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingvoor">
+                                      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapsevoor" aria-expanded="true" aria-controls="collapsevoor">
+                                        Voor Wie
+                                      </button>
+                                    </h2>
+                                    <div id="collapsevoor" class="accordion-collapse collapse show" aria-labelledby="headingvoor" data-bs-parent="#accordionExample">
+                                      <div class="accordion-body">
+                                         <div class="v-w-in">
+                                            <div class="c-check">
+                                                <label class="ch-box">Dames
+                                                  <input type="checkbox">
+                                                  <span class="checkmark"></span>
+                                                </label>
+                                            </div>
+                                            <div class="pro-num">
+                                                <p>(54)</p>
+                                            </div>
+                                         </div>
+                                         <div class="v-w-in">
+                                            <div class="c-check">
+                                                <label class="ch-box">Heren
+                                                  <input type="checkbox">
+                                                  <span class="checkmark"></span>
+                                                </label>
+                                            </div>
+                                            <div class="pro-num">
+                                                <p>(49)</p>
+                                            </div>
+                                         </div>
+                                         <div class="v-w-in">
+                                            <div class="c-check">
+                                                <label class="ch-box">Kinderen
+                                                  <input type="checkbox">
+                                                  <span class="checkmark"></span>
+                                                </label>
+                                            </div>
+                                            <div class="pro-num">
+                                                <p>(2)</p>
+                                            </div>
+                                         </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                        </div>
+                        <div class="left-p-det">
+                            <div class="accordion" id="accordionExample">
+                                  <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingcategorie">
+                                      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapsecategorie" aria-expanded="true" aria-controls="collapsecategorie">
+                                        Categorie
+                                      </button>
+                                    </h2>
+                                    <div id="collapsecategorie" class="accordion-collapse collapse show" aria-labelledby="headingcategorie" data-bs-parent="#accordionExample">
+                                      <div class="accordion-body">
+                                         <div class="v-w-in">
+                                            <div class="c-check">
+                                                <label class="ch-box">Horlogebandjes 
+                                                  <input type="checkbox">
+                                                  <span class="checkmark"></span>
+                                                </label>
+                                            </div>
+                                            <div class="pro-num">
+                                                <p>(21)</p>
+                                            </div>
+                                         </div>
+                                         <div class="v-w-in">
+                                            <div class="c-check">
+                                                <label class="ch-box">Smartwatches 
+                                                  <input type="checkbox">
+                                                  <span class="checkmark"></span>
+                                                </label>
+                                            </div>
+                                            <div class="pro-num">
+                                                <p>(36)</p>
+                                            </div>
+                                         </div>
+                                         
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                        </div>
+                        <div class="left-p-det">
+                            <div class="accordion" id="accordionExample">
+                                  <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingmaat">
+                                      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapsemaat" aria-expanded="true" aria-controls="collapsemaat">
+                                        Maat
+                                      </button>
+                                    </h2>
+                                    <div id="collapsemaat" class="accordion-collapse collapse show" aria-labelledby="headingmaat" data-bs-parent="#accordionExample">
+                                      <div class="accordion-body">
+                                         <div class="v-w-in">
+                                            <div class="c-check">
+                                                <label class="ch-box">1
+                                                  <input type="checkbox">
+                                                  <span class="checkmark"></span>
+                                                </label>
+                                            </div>
+                                            <div class="pro-num">
+                                                <p>(32)</p>
+                                            </div>
+                                         </div>
+                                         <div class="v-w-in">
+                                            <div class="c-check">
+                                                <label class="ch-box">110 - 175mm
+                                                  <input type="checkbox">
+                                                  <span class="checkmark"></span>
+                                                </label>
+                                            </div>
+                                            <div class="pro-num">
+                                                <p>(1)</p>
+                                            </div>
+                                         </div>
+                                         <div class="v-w-in">
+                                            <div class="c-check">
+                                                <label class="ch-box">120 - 195mm
+                                                  <input type="checkbox">
+                                                  <span class="checkmark"></span>
+                                                </label>
+                                            </div>
+                                            <div class="pro-num">
+                                                <p>(2)</p>
+                                            </div>
+                                         </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                        </div>
+                        <div class="left-p-det">
+                            <div class="accordion" id="accordionExample">
+                                  <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingkleur">
+                                      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapsekleur" aria-expanded="true" aria-controls="collapsekleur">
+                                        Kleur
+                                      </button>
+                                    </h2>
+                                    <div id="collapsekleur" class="accordion-collapse collapse show" aria-labelledby="headingkleur" data-bs-parent="#accordionExample">
+                                      <div class="accordion-body">
+                                         <div class="v-w-in">
+                                            <div class="c-check">
+                                                <label class="ch-box"><div class="box-color"><span class="color-sq" style="background-color:#dfd8bc;"></span>Beige</div>
+                                                  <input type="checkbox">
+                                                  <span class="checkmark"></span>
+                                                </label>
+                                            </div>
+                                            <div class="pro-num">
+                                                <p>(54)</p>
+                                            </div>
+                                         </div>
+                                         <div class="v-w-in">
+                                            <div class="c-check">
+                                                <label class="ch-box"><div class="box-color"><span class="color-sq" style="background-color:#3333FF;"></span>Blauw </div>
+                                                  <input type="checkbox">
+                                                  <span class="checkmark"></span>
+                                                </label>
+                                            </div>
+                                            <div class="pro-num">
+                                                <p>(49)</p>
+                                            </div>
+                                         </div>
+                                         <div class="v-w-in">
+                                            <div class="c-check">
+                                                <label class="ch-box"><div class="box-color"><span class="color-sq" style="background-color:#663300;"></span>Bruin</div>
+                                                  <input type="checkbox">
+                                                  <span class="checkmark"></span>
+                                                </label>
+                                            </div>
+                                            <div class="pro-num">
+                                                <p>(2)</p>
+                                            </div>
+                                         </div>
+                                         <div class="meer-tonen">
+                                            <a href="javascript:;">Meer-tonen</a>
+                                         </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                        </div>
+                        <div class="left-p-det">
+                            <div class="accordion" id="accordionExample">
+                                  <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingvoor">
+                                      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapsevoor" aria-expanded="true" aria-controls="collapsevoor">
+                                        Prijs
+                                      </button>
+                                    </h2>
+                                    <div id="collapsevoor" class="accordion-collapse collapse show" aria-labelledby="headingvoor" data-bs-parent="#accordionExample">
+                                      <div class="accordion-body">
+                                         <div class="range-box">
+                                            <div class="range-slide">
+                                              <div class="slide">
+                                                <div class="line" id="line" style="left: 0%; right: 0%;"></div>
+                                                <span class="thumb" id="thumbMin" style="left: 0%;"></span>
+                                                <span class="thumb" id="thumbMax" style="left: 100%;"></span>
+                                              </div>
+                                              <input id="rangeMin" type="range" max="100" min="10" step="5" value="0">
+                                              <input id="rangeMax" type="range" max="100" min="10" step="5" value="100">
+                                            </div>
+                                            <div class="display">
+                                              <span id="min">10</span>
+                                              <span id="max">100</span>
+                                            </div>
 
-    </div>
+                                         </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                        </div>
+                        <div class="left-p-det">
+                            <div class="accordion" id="accordionExample">
+                                  <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingsale">
+                                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsesale" aria-expanded="true" aria-controls="collapsesale">
+                                        Sale %
+                                      </button>
+                                    </h2>
+                                    <div id="collapsesale" class="accordion-collapse collapse " aria-labelledby="headingsale" data-bs-parent="#accordionExample">
+                                      <div class="accordion-body">
+                                         <div class="v-w-in">
+                                            <div class="c-check">
+                                                <label class="ch-box">10% - 20%
+                                                  <input type="checkbox">
+                                                  <span class="checkmark"></span>
+                                                </label>
+                                            </div>
+                                            <div class="pro-num">
+                                                <p>(5)</p>
+                                            </div>
+                                         </div>
+                                         <div class="v-w-in">
+                                            <div class="c-check">
+                                                <label class="ch-box">20% - 30%
+                                                  <input type="checkbox">
+                                                  <span class="checkmark"></span>
+                                                </label>
+                                            </div>
+                                            <div class="pro-num">
+                                                <p>(41)</p>
+                                            </div>
+                                         </div>
+                                         <div class="v-w-in">
+                                            <div class="c-check">
+                                                <label class="ch-box">30% - 40%
+                                                  <input type="checkbox">
+                                                  <span class="checkmark"></span>
+                                                </label>
+                                            </div>
+                                            <div class="pro-num">
+                                                <p>(1)</p>
+                                            </div>
+                                         </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                        </div>
+                        <div class="left-p-det">
+                            <div class="accordion" id="accordionExample">
+                                  <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingmateriaal">
+                                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsemateriaal" aria-expanded="true" aria-controls="collapsemateriaal">
+                                        Materiaal
+                                      </button>
+                                    </h2>
+                                    <div id="collapsemateriaal" class="accordion-collapse collapse " aria-labelledby="headingmateriaal" data-bs-parent="#accordionExample">
+                                      <div class="accordion-body">
+                                         <div class="v-w-in">
+                                            <div class="c-check">
+                                                <label class="ch-box">Siliconen
+                                                  <input type="checkbox">
+                                                  <span class="checkmark"></span>
+                                                </label>
+                                            </div>
+                                            <div class="pro-num">
+                                                <p>(43)</p>
+                                            </div>
+                                         </div>
+                                         <div class="v-w-in">
+                                            <div class="c-check">
+                                                <label class="ch-box">Leer
+                                                  <input type="checkbox">
+                                                  <span class="checkmark"></span>
+                                                </label>
+                                            </div>
+                                            <div class="pro-num">
+                                                <p>(8)</p>
+                                            </div>
+                                         </div>
+                                          
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                        </div>
+                        <div class="left-p-det">
+                            <div class="accordion" id="accordionExample">
+                                  <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingsoort">
+                                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsesoort" aria-expanded="true" aria-controls="collapsesoort">
+                                        Soort Uurwerk
+                                      </button>
+                                    </h2>
+                                    <div id="collapsesoort" class="accordion-collapse collapse" aria-labelledby="headingsoort" data-bs-parent="#accordionExample">
+                                      <div class="accordion-body">
+                                         <div class="v-w-in">
+                                            <div class="c-check">
+                                                <label class="ch-box">Accu
+                                                  <input type="checkbox">
+                                                  <span class="checkmark"></span>
+                                                </label>
+                                            </div>
+                                            <div class="pro-num">
+                                                <p>(10)</p>
+                                            </div>
+                                         </div>
+                                         <div class="v-w-in">
+                                            <div class="c-check">
+                                                <label class="ch-box">Automatic
+                                                  <input type="checkbox">
+                                                  <span class="checkmark"></span>
+                                                </label>
+                                            </div>
+                                            <div class="pro-num">
+                                                <p>(4)</p>
+                                            </div>
+                                         </div>
+                                         <div class="v-w-in">
+                                            <div class="c-check">
+                                                <label class="ch-box">Digitaal
+                                                  <input type="checkbox">
+                                                  <span class="checkmark"></span>
+                                                </label>
+                                            </div>
+                                            <div class="pro-num">
+                                                <p>(11)</p>
+                                            </div>
+                                         </div>
+                                         <div class="meer-tonen">
+                                            <a href="javascript:;">Meer-tonen</a>
+                                         </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                        </div>
+                        <div class="left-p-det">
+                            <div class="accordion" id="accordionExample">
+                                  <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingkleur">
+                                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsekleur" aria-expanded="true" aria-controls="collapsekleur">
+                                        Kleur Kast
+                                      </button>
+                                    </h2>
+                                    <div id="collapsekleur" class="accordion-collapse collapse " aria-labelledby="headingkleur" data-bs-parent="#accordionExample">
+                                      <div class="accordion-body">
+                                         <div class="v-w-in">
+                                            <div class="c-check">
+                                                <label class="ch-box">Blauw
+                                                  <input type="checkbox">
+                                                  <span class="checkmark"></span>
+                                                </label>
+                                            </div>
+                                            <div class="pro-num">
+                                                <p>(2)</p>
+                                            </div>
+                                         </div>
+                                         <div class="v-w-in">
+                                            <div class="c-check">
+                                                <label class="ch-box">Donkergrijs
+                                                  <input type="checkbox">
+                                                  <span class="checkmark"></span>
+                                                </label>
+                                            </div>
+                                            <div class="pro-num">
+                                                <p>(41)</p>
+                                            </div>
+                                         </div>
+                                         <div class="v-w-in">
+                                            <div class="c-check">
+                                                <label class="ch-box">Grijs
+                                                  <input type="checkbox">
+                                                  <span class="checkmark"></span>
+                                                </label>
+                                            </div>
+                                            <div class="pro-num">
+                                                <p>(1)</p>
+                                            </div>
+                                         </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                        </div>
+                        <div class="left-p-det">
+                            <div class="accordion" id="accordionExample">
+                                  <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingdiameter">
+                                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsediameter" aria-expanded="true" aria-controls="collapsediameter">
+                                        Diameter Kast
+                                      </button>
+                                    </h2>
+                                    <div id="collapsediameter" class="accordion-collapse collapse " aria-labelledby="headingdiameter" data-bs-parent="#accordionExample">
+                                      <div class="accordion-body">
+                                         <div class="v-w-in">
+                                            <div class="c-check">
+                                                <label class="ch-box">< 25 mm
+                                                  <input type="checkbox">
+                                                  <span class="checkmark"></span>
+                                                </label>
+                                            </div>
+                                            <div class="pro-num">
+                                                <p>(2)</p>
+                                            </div>
+                                         </div>
+                                         <div class="v-w-in">
+                                            <div class="c-check">
+                                                <label class="ch-box">31-35 mm 
+                                                  <input type="checkbox">
+                                                  <span class="checkmark"></span>
+                                                </label>
+                                            </div>
+                                            <div class="pro-num">
+                                                <p>(41)</p>
+                                            </div>
+                                         </div>
+                                         <div class="v-w-in">
+                                            <div class="c-check">
+                                                <label class="ch-box">>40 mm
+                                                  <input type="checkbox">
+                                                  <span class="checkmark"></span>
+                                                </label>
+                                            </div>
+                                            <div class="pro-num">
+                                                <p>(1)</p>
+                                            </div>
+                                         </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                        </div>
+                        <div class="left-p-det">
+                            <div class="accordion" id="accordionExample">
+                                  <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingvorm">
+                                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsevorm" aria-expanded="true" aria-controls="collapsevorm">
+                                        Vorm Kast
+                                      </button>
+                                    </h2>
+                                    <div id="collapsevorm" class="accordion-collapse collapse " aria-labelledby="headingvorm" data-bs-parent="#accordionExample">
+                                      <div class="accordion-body">
+                                         <div class="v-w-in">
+                                            <div class="c-check">
+                                                <label class="ch-box">Rond
+                                                  <input type="checkbox">
+                                                  <span class="checkmark"></span>
+                                                </label>
+                                            </div>
+                                            <div class="pro-num">
+                                                <p>(2)</p>
+                                            </div>
+                                         </div>
+                                         <div class="v-w-in">
+                                            <div class="c-check">
+                                                <label class="ch-box">Vierkat
+                                                  <input type="checkbox">
+                                                  <span class="checkmark"></span>
+                                                </label>
+                                            </div>
+                                            <div class="pro-num">
+                                                <p>(41)</p>
+                                            </div>
+                                         </div>
+                                          
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                        </div>
+                        <div class="left-p-det">
+                            <div class="accordion" id="accordionExample">
+                                  <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingstijl">
+                                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsestijl" aria-expanded="true" aria-controls="collapsestijl">
+                                        Stijl
+                                      </button>
+                                    </h2>
+                                    <div id="collapsestijl" class="accordion-collapse collapse " aria-labelledby="headingstijl" data-bs-parent="#accordionExample">
+                                      <div class="accordion-body">
+                                         <div class="v-w-in">
+                                            <div class="c-check">
+                                                <label class="ch-box">Rond
+                                                  <input type="checkbox">
+                                                  <span class="checkmark"></span>
+                                                </label>
+                                            </div>
+                                            <div class="pro-num">
+                                                <p>(2)</p>
+                                            </div>
+                                         </div>
+                                         <div class="v-w-in">
+                                            <div class="c-check">
+                                                <label class="ch-box">Vierkat
+                                                  <input type="checkbox">
+                                                  <span class="checkmark"></span>
+                                                </label>
+                                            </div>
+                                            <div class="pro-num">
+                                                <p>(41)</p>
+                                            </div>
+                                         </div>
+                                          
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-9">
+                    <div class="right-in-pro-detail">
+                            <div class="top-det">
+                                <div class="sorteer">
+                                    <p>Sort By</p>
+                                    <select class="form-select" >
+                                          <option selected>Latest Collection</option>
+                                          <option value="1">Recommended</option>
+                                          <option value="2">Price Ascending</option>
+                                          <option value="3">Most sold</option>
+                                        </select>
+                                </div>
+                                <div class="artikelen">
+                                    <p>52 Articles</p>
+                                </div>
+                                <div class="page-no">
+                                    <p>1/1</p>
+                                </div>
+                            </div>
+                          <div class="pro-in-detal">
+                            <div class="in-pro-sec">
+                              <div class="row">
+                                @foreach ($subsubcategory_products as $product)
+                                <div class="col-md-6 col-lg-4">
+                                  <div class="in-pro-det">
+                                    <div class="overlay" style="display: none;">
+                                      <ul>
+                                        @foreach($product->images as $images)
+                                        <li><a href="javascript:;"></a><img src="{{ asset($images->photo_name) }}" class="img-fluid" alt="p1-o1"></li>
+                                        @endforeach
+                                      </ul>
+                                    </div>
+                                    <div class="p-im-link">
+                                      <div class="p-b-img">
+                                        <a href="{{ route('frontend-product-details',['id' => $product->id, 'slug' => $product->product_slug_en]) }}">
+                                          <img src="{{ asset($product->product_thumbnail) }}" class="img-fluid p-m-img" alt="p1-o">
+                                        </a>
+                                      </div>
+                                      <div class="p-bot-d">
+                                        <a href="{{ route('frontend-product-details',['id' => $product->id, 'slug' => $product->product_slug_en]) }}" class="pr-n-h"> {{ $product->product_name_en }}</a>
+                                        <p><a href="{{ route('frontend-product-details',['id' => $product->id, 'slug' => $product->product_slug_en]) }}" class="p-text">Fae</a></p>
+                                        @php
+                                            $discount_amount = (($product->selling_price-$product->discount_price)/($product->selling_price))*100
+                                        @endphp
+                                        @if ($product->discount_price == NULL || $discount_amount <= 0)
+                                                <p class="product-price">${{ $product->selling_price }}
+                                                  <span class="korper">NEW</span>
+                                                </p>
+                                        @else
+                                           
+                                             <p class="product-price">${{ $product->discount_price }}
+                                              <s class="prijsgroen">${{ $product->selling_price }}</s>
+                                              <span class="korper">{{ round($discount_amount) }}%</span>
+                                            </p>
+                                        @endif
+                                       
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                @endforeach
+                              </div>
+                            </div>
+                           
+                          </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="pro-descri">
+        <div class="container">
+            <div class="in-pro-ds">
+                <div class="deta-ds">
+                    <h6>{{$subsubcategory_details->subsubcategory_name_en}}</h6>
+                </div>
+              
+            </div>
+        </div>
+    </section>
+ 
 @endsection
