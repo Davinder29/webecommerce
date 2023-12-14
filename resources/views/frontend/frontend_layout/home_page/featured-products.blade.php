@@ -17,7 +17,10 @@
           <div class="in-pro-det">
             <div class="overlay" style="display: none;">
               <ul>
-                <li><a href="{{ route('frontend-product-details',['id' => $product->id, 'slug' => $product->product_slug_en]) }}"></a><img src="{{ asset($product->product_thumbnail) }}" class="img-fluid" alt="p1-o1"></li>
+                <li>
+                  <a href="{{ route('frontend-product-details',['id' => $product->id, 'slug' => $product->product_slug_en]) }}"></a>
+                  <img src="{{ asset($product->product_thumbnail) }}" class="img-fluid" alt="p1-o1">
+                </li>
               <!--   <li><a href="javascript:;"></a><img src="images/p1-o2.jpg" class="img-fluid" alt="p1-o2"></li>
                 <li><a href="javascript:;"></a><img src="images/p1-o3.jpg" class="img-fluid" alt="p1-o3"></li>
                 <li><a href="javascript:;"></a><img src="images/p1-o4.jpg" class="img-fluid" alt="p1-o4"></li> -->
@@ -32,7 +35,6 @@
               </div>
               <div class="p-bot-d">
                 <a href="{{ route('frontend-product-details',['id' => $product->id, 'slug' => $product->product_slug_en]) }}" class="pr-n-h">  {{ $product->product_name_en }}</a>
-                <p><a href="{{ route('frontend-product-details',['id' => $product->id, 'slug' => $product->product_slug_en]) }}ss" class="p-text">Fae</a></p>
                 @php
                     $discount_amount = (($product->selling_price-$product->discount_price)/($product->selling_price))*100
                 @endphp

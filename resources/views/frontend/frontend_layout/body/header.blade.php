@@ -37,8 +37,8 @@
             </div>
             <div class="right-top-list">
               <ul class="r-i-l">
-                <li><a href="javascript:;" class="klant">Customer Service</a></li>
-                 <li><a  href="{{ route('dashboard') }}" class="heart"><i class="fa-solid fa-home"></i></a></li>
+               <!--  <li><a href="javascript:;" class="klant">Customer Service</a></li> -->
+                 <li><a  href="{{ url('/') }}" class="heart"><i class="fa-solid fa-home"></i></a></li>
                 @auth
                  <li><a class="heart" href="{{ route('dashboard') }}"><i class="fa-solid fa-user"></i></a></li>
                 @else

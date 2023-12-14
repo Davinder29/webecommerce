@@ -16,20 +16,20 @@ class FrontendPageController extends Controller
     public function home()
     {
         $categories = Category::with(['subcategory', 'subsubcategory', 'products'])->orderBy('category_name_en', 'ASC')->get();
-        $sliders = Slider::where('slider_name', '=', 'Main-Slider')->where('slider_status', '=', 1)->limit(3)->get();
+        $sliders = Slider::where('slider_name', '=', 'Main-Slider')->where('slider_status', '=', 1)->limit(6)->get();
         $new_products = Product::with(['images'])
         ->where('new_arrival' ,'=', 1)
-        ->where('status', 1)->limit(20)->get();
+        ->where('status', 1)->limit(6)->get();
 
         $skip_category_0 = Category::skip(0)->first();
         $skip_category_products_0 = Product::where('category_id', $skip_category_0->id)
                         ->where('status', 1)
-                        ->latest()->limit(20)->get();
+                        ->latest()->limit(6)->get();
 
         $skip_brand_0 = Brand::skip(0)->first();
         $skip_brand_products_0 = Product::where('brand_id', $skip_brand_0->id)
                         ->where('status', 1)
-                        ->latest()->limit(20)->get();
+                        ->latest()->limit(6)->get();
 
         //return response()->json($categories);
         return view('frontend.index', compact(

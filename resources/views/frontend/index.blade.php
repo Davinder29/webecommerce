@@ -8,14 +8,11 @@
 
             <!--  SIDEBAR  -->
                 @include('frontend.frontend_layout.body.sidebar')
-            <!--  SIDEBAR : END  -->
-            <!--  CONTENT  -->
-           
+               <!--  SIDEBAR : END  -->
+               <!--  CONTENT  -->
                 @include('frontend.frontend_layout.home_page.hero-section')
                 <!--  SECTION – HERO : END  -->
-
                 <!--  INFO BOXES  -->
-              
                 @include('frontend.frontend_layout.home_page.info-boxes')
                 <!--  INFO BOXES : END  -->
                 <!--  SCROLL TABS  -->
@@ -25,7 +22,6 @@
                 <!--  WIDE PRODUCTS  -->
                 @include('frontend.frontend_layout.home_page.two-column-banner')
                 <!--  WIDE PRODUCTS : END  -->
-
                 <!--  FEATURED PRODUCTS  -->
                 @include('frontend.frontend_layout.home_page.featured-products')
                 <!-- /.section -->

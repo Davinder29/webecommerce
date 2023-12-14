@@ -86,7 +86,7 @@ ul, li, p, figure{
     padding: 0;
     margin: 0;
     position: absolute;
-    /* width: 100%; */
+    width: auto; 
     display: inline-block;
     top: 9px;
     position: fixed;
@@ -372,7 +372,7 @@ font-size: 14px;
     font-size: 12px;
     text-transform: uppercase;
     color: #54544f;
-    padding: 15px 11px !important;
+    padding: 15px 4px !important;
 }
 .header .menu > ul > li .sub-menu {
     position: absolute;
@@ -479,8 +479,32 @@ font-size: 14px;
 }
 
 /*responsive*/
+@media(max-width: 1199px){
+.main-catagries .inn-catag .cat-detail .cat-text {
+    font-size: 11px;
+    height: auto !important; 
+}
+}
 @media(max-width: 991px){
-
+    .right-top .right-top-list ul.r-i-l li {
+    padding: 0 5px;
+}
+.right-top .right-top-list ul.r-i-l .heart, .right-top .right-top-list ul.r-i-l .shipping-bag {
+    font-size: 20px;
+    color: #fff;
+    position: relative;
+}
+.top-bar {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+    .main-header .top-bar .left-top .mob-header-menu {
+        width: 120px;
+    }
+   /*.right-top .right-top-list ul.r-i-l li:nth-child(4), .right-top .right-top-list ul.r-i-l li:nth-child(6) {
+        display: none;
+    }
+*/
     .header .item-center{
         order:3;
         flex:0 0 100%;
@@ -923,6 +947,7 @@ section.media-banner-input {
     background-color: #f4f4df;
     padding: 0px;
     margin: 0px;
+    height: 100%
 }
 .main-catagries .inn-catag .cat-detail {
     padding: 10px;
@@ -933,13 +958,15 @@ section.media-banner-input {
     margin-bottom: 10px;
     text-transform: uppercase;
     font-weight: 500;
+    height: 40px;
 }
 .main-catagries .inn-catag .cat-detail .cat-text {
     color: #363636;
     font-size: 12px;
     font-weight: 300;
-    height: 165px;
+    height: auto;
     line-height: 1.4;
+    margin-bottom: 10px;
 }
 .main-catagries .inn-catag .cat-detail .cat-link {
     font-size: 13px;
@@ -2196,6 +2223,11 @@ section.media-banner-input {
         max-width: 100%;
         margin-top: 10px;
     }
+    .mid-footer .Nieuwsbrief ul li input {
+  
+    left: 15px;
+}
+
 
 }
 
@@ -2406,6 +2438,9 @@ section.media-banner-input {
  .main-over .over-banner .ons-banner-text h2 {
     font-size: 40px;
  
+}
+.mid-footer .Uitstekend {
+    margin-top: 20px !important;
 }
 }
 @media (max-width:575px){
