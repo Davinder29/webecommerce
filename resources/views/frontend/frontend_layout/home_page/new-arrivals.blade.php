@@ -49,4 +49,3 @@
   </div>
 </section>
 <!-- /.section -->
-echo "milan_dev" | sudo tee -a /etc/vsftpd.userlist
